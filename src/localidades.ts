@@ -27,6 +27,20 @@ import municipios51Json from './data/51.json';
 import municipios52Json from './data/52.json';
 import municipios53Json from './data/53.json';
 
+function sortNormalized(values: string[]) {
+  let obj: Record<string, string> = {};
+
+  for (const value of values) {
+    const key = value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    obj[key] = value;
+  }
+
+  const sortedKeys = Object.keys(obj).sort();
+  const sortedValues = sortedKeys.map(key => obj[key]);
+
+  return sortedValues;
+}
+
 /**
  * Retorna Estados no formato do IBGE
  * @example
@@ -149,7 +163,7 @@ export function ibgeSiglasEstados() {
  * ibgeSiglasEstadosAsc();
  */
 export function ibgeSiglasEstadosAsc() {
-  return ibgeSiglasEstados().sort();
+  return sortNormalized(ibgeSiglasEstados());
 }
 
 /**
@@ -179,7 +193,7 @@ export function ibgeNomesEstados() {
  * ibgeNomesEstadosAsc();
  */
 export function ibgeNomesEstadosAsc() {
-  return ibgeNomesEstados().sort();
+  return sortNormalized(ibgeNomesEstados());
 }
 
 /**
@@ -211,7 +225,7 @@ export function ibgeNomesMunicipios(idOuSiglaEstado: number | string) {
  * ibgeNomesMunicipiosAsc('DF');
  */
 export function ibgeNomesMunicipiosAsc(idOuSiglaEstado: number | string) {
-  return ibgeNomesMunicipios(idOuSiglaEstado).sort();
+  return sortNormalized(ibgeNomesMunicipios(idOuSiglaEstado));
 }
 
 /**

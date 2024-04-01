@@ -78,6 +78,8 @@ test('IBGE nomes municipios ASC', () => {
   const nomesMunicipios = ibgeNomesMunicipiosAsc('GO');
   expect(nomesMunicipios).toBeInstanceOf(Array);
   expect(nomesMunicipios.length).toBe(246);
+  expect(nomesMunicipios[0]).toBe('Abadia de Goiás');
+  expect(nomesMunicipios[nomesMunicipios.length - 1]).toBe('Vila Propício');
 });
 
 test('IBGE nomes municipios DESC', () => {
