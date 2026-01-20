@@ -10,10 +10,10 @@
   "scripts": {
     "clean": "rm -rf node_modules && rm -rf .pnpm-store && rm -rf lib",
     "tsc": "rm -rf lib && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "prepublishOnly": "pnpm run tsc",
+    "prepublishOnly": "npm run tsc",
     "test": "jest",
     "docs": "typedoc --out docs src",
-    "build": "pnpm run tsc && pnpm run docs && npx changelogen --output --bump"
+    "build": "npm run tsc && npm run docs && npx changelogen --output --bump"
   },
   "repository": {
     "type": "git",
