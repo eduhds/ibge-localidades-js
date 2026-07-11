@@ -25,3 +25,5 @@ export {
   ibgeNomesMunicipiosAsc,
   ibgeNomesMunicipiosDesc
 };
+
+export { ibgeApi, createIbgeApiClient } from './api';
