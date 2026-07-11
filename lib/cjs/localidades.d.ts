@@ -3,6 +3,8 @@
  * @example
  * // returns [{"id":11,"sigla":"RO","nome":"Rondônia","regiao":{"id":1,"sigla":"N","nome":"Norte"}}, ...]
  * ibgeEstados();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export declare function ibgeEstados(): {
     id: number;
@@ -20,6 +22,8 @@ export declare function ibgeEstados(): {
  * // returns [{"id":5300108,"nome":"Brasília","microrregiao":{"id":53001,"nome":"Brasília","mesorregiao":{"id":5301,"nome":"Distrito Federal","UF":{"id":53,"sigla":"DF","nome":"Distrito Federal","regiao":{"id":5,"sigla":"CO","nome":"Centro-Oeste"}}}},"regiao-imediata":{"id":530001,"nome":"Distrito Federal","regiao-intermediaria":{"id":5301,"nome":"Distrito Federal","UF":{"id":53,"sigla":"DF","nome":"Distrito Federal","regiao":{"id":5,"sigla":"CO","nome":"Centro-Oeste"}}}}}]
  * ibgeMunicipios(53);
  * ibgeMunicipios('DF');
+ *
+ * @deprecated Use ibgeApi.municipios
  */
 export declare function ibgeMunicipios(idOuSiglaEstado: number | string): {
     id: number;
@@ -66,6 +70,8 @@ export declare function ibgeMunicipios(idOuSiglaEstado: number | string): {
  * @example
  * // returns ['RO', 'AC', ...]
  * ibgeSiglasEstados();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export declare function ibgeSiglasEstados(): string[];
 /**
@@ -73,6 +79,8 @@ export declare function ibgeSiglasEstados(): string[];
  * @example
  * // returns ['AC', 'AL', ...]
  * ibgeSiglasEstadosAsc();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export declare function ibgeSiglasEstadosAsc(): string[];
 /**
@@ -80,6 +88,8 @@ export declare function ibgeSiglasEstadosAsc(): string[];
  * @example
  * // returns ['RO', 'RR', ...]
  * ibgeSiglasEstadosDesc();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export declare function ibgeSiglasEstadosDesc(): string[];
 /**
@@ -87,6 +97,8 @@ export declare function ibgeSiglasEstadosDesc(): string[];
  * @example
  * // returns ['Rondônia', 'Acre', ...]
  * ibgeNomesEstados();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export declare function ibgeNomesEstados(): string[];
 /**
@@ -94,6 +106,8 @@ export declare function ibgeNomesEstados(): string[];
  * @example
  * // returns ['Acre', 'Alagoas', ...]
  * ibgeNomesEstadosAsc();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export declare function ibgeNomesEstadosAsc(): string[];
 /**
@@ -101,6 +115,8 @@ export declare function ibgeNomesEstadosAsc(): string[];
  * @example
  * // returns ['Rondônia', 'Roraima', ...]
  * ibgeNomesEstadosDesc();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export declare function ibgeNomesEstadosDesc(): string[];
 /**
@@ -109,6 +125,8 @@ export declare function ibgeNomesEstadosDesc(): string[];
  * // returns ['Brasília', 'Cruzeiro do Sul', ...]
  * ibgeNomesMunicipios(53);
  * ibgeNomesMunicipios('DF');
+ *
+ * @deprecated Use ibgeApi.municipios
  */
 export declare function ibgeNomesMunicipios(idOuSiglaEstado: number | string): string[];
 /**
@@ -117,6 +135,8 @@ export declare function ibgeNomesMunicipios(idOuSiglaEstado: number | string): s
  * // returns ['Alegre', 'Alvorada', ...]
  * ibgeNomesMunicipiosAsc(53);
  * ibgeNomesMunicipiosAsc('DF');
+ *
+ * @deprecated Use ibgeApi.municipios
  */
 export declare function ibgeNomesMunicipiosAsc(idOuSiglaEstado: number | string): string[];
 /**
@@ -125,5 +145,7 @@ export declare function ibgeNomesMunicipiosAsc(idOuSiglaEstado: number | string)
  * // returns ['Vila Nova', 'Vila Velha', ...]
  * ibgeNomesMunicipiosDesc(53);
  * ibgeNomesMunicipiosDesc('DF');
+ *
+ * @deprecated Use ibgeApi.municipios
  */
 export declare function ibgeNomesMunicipiosDesc(idOuSiglaEstado: number | string): string[];
