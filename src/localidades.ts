@@ -46,6 +46,8 @@ function sortNormalized(values: string[]) {
  * @example
  * // returns [{"id":11,"sigla":"RO","nome":"Rondônia","regiao":{"id":1,"sigla":"N","nome":"Norte"}}, ...]
  * ibgeEstados();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export function ibgeEstados() {
   return estadosJson;
@@ -57,6 +59,8 @@ export function ibgeEstados() {
  * // returns [{"id":5300108,"nome":"Brasília","microrregiao":{"id":53001,"nome":"Brasília","mesorregiao":{"id":5301,"nome":"Distrito Federal","UF":{"id":53,"sigla":"DF","nome":"Distrito Federal","regiao":{"id":5,"sigla":"CO","nome":"Centro-Oeste"}}}},"regiao-imediata":{"id":530001,"nome":"Distrito Federal","regiao-intermediaria":{"id":5301,"nome":"Distrito Federal","UF":{"id":53,"sigla":"DF","nome":"Distrito Federal","regiao":{"id":5,"sigla":"CO","nome":"Centro-Oeste"}}}}}]
  * ibgeMunicipios(53);
  * ibgeMunicipios('DF');
+ *
+ * @deprecated Use ibgeApi.municipios
  */
 export function ibgeMunicipios(idOuSiglaEstado: number | string) {
   switch (idOuSiglaEstado) {
@@ -151,6 +155,8 @@ export function ibgeMunicipios(idOuSiglaEstado: number | string) {
  * @example
  * // returns ['RO', 'AC', ...]
  * ibgeSiglasEstados();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export function ibgeSiglasEstados() {
   return ibgeEstados().map(estado => estado.sigla);
@@ -161,6 +167,8 @@ export function ibgeSiglasEstados() {
  * @example
  * // returns ['AC', 'AL', ...]
  * ibgeSiglasEstadosAsc();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export function ibgeSiglasEstadosAsc() {
   return sortNormalized(ibgeSiglasEstados());
@@ -171,6 +179,8 @@ export function ibgeSiglasEstadosAsc() {
  * @example
  * // returns ['RO', 'RR', ...]
  * ibgeSiglasEstadosDesc();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export function ibgeSiglasEstadosDesc() {
   return ibgeSiglasEstados().sort().reverse();
@@ -181,6 +191,8 @@ export function ibgeSiglasEstadosDesc() {
  * @example
  * // returns ['Rondônia', 'Acre', ...]
  * ibgeNomesEstados();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export function ibgeNomesEstados() {
   return ibgeEstados().map(estado => estado.nome);
@@ -191,6 +203,8 @@ export function ibgeNomesEstados() {
  * @example
  * // returns ['Acre', 'Alagoas', ...]
  * ibgeNomesEstadosAsc();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export function ibgeNomesEstadosAsc() {
   return sortNormalized(ibgeNomesEstados());
@@ -201,6 +215,8 @@ export function ibgeNomesEstadosAsc() {
  * @example
  * // returns ['Rondônia', 'Roraima', ...]
  * ibgeNomesEstadosDesc();
+ *
+ * @deprecated Use ibgeApi.estados
  */
 export function ibgeNomesEstadosDesc() {
   return ibgeNomesEstados().sort().reverse();
@@ -212,6 +228,8 @@ export function ibgeNomesEstadosDesc() {
  * // returns ['Brasília', 'Cruzeiro do Sul', ...]
  * ibgeNomesMunicipios(53);
  * ibgeNomesMunicipios('DF');
+ *
+ * @deprecated Use ibgeApi.municipios
  */
 export function ibgeNomesMunicipios(idOuSiglaEstado: number | string) {
   return ibgeMunicipios(idOuSiglaEstado).map(municipio => municipio.nome);
@@ -223,6 +241,8 @@ export function ibgeNomesMunicipios(idOuSiglaEstado: number | string) {
  * // returns ['Alegre', 'Alvorada', ...]
  * ibgeNomesMunicipiosAsc(53);
  * ibgeNomesMunicipiosAsc('DF');
+ *
+ * @deprecated Use ibgeApi.municipios
  */
 export function ibgeNomesMunicipiosAsc(idOuSiglaEstado: number | string) {
   return sortNormalized(ibgeNomesMunicipios(idOuSiglaEstado));
@@ -234,6 +254,8 @@ export function ibgeNomesMunicipiosAsc(idOuSiglaEstado: number | string) {
  * // returns ['Vila Nova', 'Vila Velha', ...]
  * ibgeNomesMunicipiosDesc(53);
  * ibgeNomesMunicipiosDesc('DF');
+ *
+ * @deprecated Use ibgeApi.municipios
  */
 export function ibgeNomesMunicipiosDesc(idOuSiglaEstado: number | string) {
   return ibgeNomesMunicipios(idOuSiglaEstado).sort().reverse();
